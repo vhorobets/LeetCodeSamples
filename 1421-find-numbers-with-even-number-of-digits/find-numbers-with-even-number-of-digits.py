@@ -1,5 +1,5 @@
-class Solution(object):
-    def findNumbers(self, nums):
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
         def digitNumber(n):
             if n == 0:
                 return 1
@@ -16,5 +16,4 @@ class Solution(object):
                 k += 1
         
         return k
-    
         
