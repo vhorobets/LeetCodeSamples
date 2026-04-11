@@ -17,7 +17,7 @@ class MyStack:
         return  self.__queue[0]
 
     def empty(self) -> bool:
-        return len( self.__queue) == 0
+        return len(self.__queue) == 0
         
 
 
