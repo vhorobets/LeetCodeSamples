@@ -6,10 +6,7 @@
 #         self.right = right
 class Solution:
     def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
-        if not root.left and not root.right:
-            return 0
-        else:
-            return self.__sum_leaves_internal(root, True)
+        return self.__sum_leaves_internal(root, True)
     
     def __sum_leaves_internal(self, root: Optional[TreeNode], isRight) -> int:
         if not root:
