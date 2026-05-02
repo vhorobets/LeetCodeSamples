@@ -10,15 +10,15 @@ class Solution:
             return 0
 
         queue = deque([root])
-        visited = []
+        count = 0
 
         while queue:
             current = queue.popleft();
-            visited.append(current)
+            count += 1
 
             if current.left:
                 queue.append(current.left)
             if current.right:
                 queue.append(current.right)
 
-        return len(visited)
+        return count
