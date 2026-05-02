@@ -10,9 +10,7 @@ class Solution:
             elif op == 'D':
                 stack.append(stack[-1] * 2)
             elif op == '+':
-                prev1 = stack[-1]
-                prev2 = stack[-2]
-                stack.append(prev1 + prev2)
+                stack.append(stack[-1] + stack[-2])
             else:
                 stack.append(int(op))
 
