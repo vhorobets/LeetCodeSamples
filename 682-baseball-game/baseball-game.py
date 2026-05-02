@@ -6,7 +6,7 @@ class Solution:
             op = operations[i]
 
             if op == 'C':
-                prev = stack.pop()
+                stack.pop()
             elif op == 'D':
                 stack.append(stack[-1] * 2)
             elif op == '+':
