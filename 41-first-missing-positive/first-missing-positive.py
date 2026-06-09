@@ -20,6 +20,4 @@ class Solution:
             if nums[i] != i + 1:
                 return i + 1
 
-        m = max(nums)
-
-        return n + 1 if n == m else n
+        return n + 1 if n == nums[n - 1] else n
