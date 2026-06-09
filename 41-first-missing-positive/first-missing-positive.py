@@ -20,4 +20,4 @@ class Solution:
             if nums[i] != i + 1:
                 return i + 1
 
-        return n + 1 if n == nums[n - 1] else n
+        return n + 1
