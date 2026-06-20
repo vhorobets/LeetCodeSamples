@@ -1,6 +1,6 @@
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
-        char_hash = defaultdict(int)
+        char_hash = defaultdict(int) 
 
         for c in chars:
             char_hash[c] += 1
@@ -19,8 +19,12 @@ class Solution:
                     continue
                 else:
                     good_word = False
+                    break
                 
             if good_word:
                 res += len(word)
 
         return res
+
+        #Space complexity O(1)
+        #Time complexity O(n * k)
