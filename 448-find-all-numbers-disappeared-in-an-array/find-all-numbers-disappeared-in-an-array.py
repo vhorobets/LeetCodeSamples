@@ -3,12 +3,16 @@ class Solution:
         res = []
         n = len(nums)
 
-        hash = set(nums)
+        for i in range(n):
+            index = abs(nums[i]) - 1
+            nums[index] = -1 * abs(nums[index])
 
-        for i in range(1, n + 1):
-            if i not in hash:
-                res.append(i)
+        #print(nums)
 
+        for i in range(n):
+            if nums[i] > 0:
+                res.append(i + 1)
+ 
         return res
 
                 
