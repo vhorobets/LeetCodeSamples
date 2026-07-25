@@ -30,4 +30,4 @@ class Solution:
         return max_sum / k
 
     #O(n) - Time Complexity
-    #O(1) - space complexity
+    #O(1) - Space Complexity
