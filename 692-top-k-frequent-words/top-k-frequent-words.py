@@ -8,4 +8,9 @@ class Solution:
         result = sorted(counts.keys(), key=lambda w: (-counts[w], w))
 
         return result[:k]
+        #Count frequencies: O(n)
+        #Sort unique words: O(m log m)
+        #Total:             O(n + m log m)
+
+        #-----------------------------------------------------------------
             
