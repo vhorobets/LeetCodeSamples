@@ -3,20 +3,18 @@ from collections import deque
 class Solution:
     def countStudents(self, students: list[int], sandwiches: list[int]) -> int:
         queue = deque(students)
-        stack = deque(sandwiches)
 
-        currentCount = 0
-        currentQueue = len(queue)
-        
-        while queue and currentCount < currentQueue:
-            curr_student = queue.popleft()
+        sandwich_index = 0
+        skipped = 0
 
-            if curr_student == stack[0]:
-                stack.popleft()
-                currentCount = 0
-                currentQueue -= 1
+        while queue and skipped < len(queue):
+            student = queue.popleft()
+
+            if student == sandwiches[sandwich_index]:
+                sandwich_index += 1
+                skipped = 0
             else:
-                queue.append(curr_student)
-                currentCount += 1
+                queue.append(student)
+                skipped += 1
 
-        return currentQueue
+        return len(queue)
