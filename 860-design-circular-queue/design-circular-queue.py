@@ -2,7 +2,6 @@ class MyCircularQueue:
     class QueueNode:
         def __init__(self, value):
             self.val = value
-            self.prev = None
             self.next = None
 
     def __init__(self, k: int):
@@ -22,7 +21,6 @@ class MyCircularQueue:
             self.tail = node
         else:
             node.next = self.head
-            node.prev = self.tail
             self.tail.next = node
             self.tail = node
 
