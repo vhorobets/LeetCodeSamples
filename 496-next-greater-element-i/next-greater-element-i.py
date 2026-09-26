@@ -9,9 +9,8 @@ class Solution:
 
             stack.append(i)
            
-
         for i in range(len(nums1)):
-            nums1[i] = hashMap[nums1[i]] if nums1[i] in hashMap else -1
+            nums1[i] = hashMap.get(nums1[i], -1)
 
         return nums1
         
