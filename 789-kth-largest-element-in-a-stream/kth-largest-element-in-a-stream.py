@@ -13,9 +13,6 @@ class KthLargest:
 
         return self.heap[0]
 
-        #return heapq.nlargest(self.k, self.heap)[self.k - 1]
-
-
 # Your KthLargest object will be instantiated and called as such:
 # obj = KthLargest(k, nums)
 # param_1 = obj.add(val)
