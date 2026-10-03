@@ -18,4 +18,4 @@ class Solution:
         if left.val != right.val:
             return False
 
-        return self.__compare_internal(left.left, right.right) and self.__compare_internal(left.right, right.left)
+        return self.__compare_internal(left.left, right.right) and self.__compare_internal(right.left, left.right)
