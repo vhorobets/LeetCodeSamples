@@ -6,17 +6,14 @@ class Solution:
     #   -1 -1 -2 -3
 
         count_negative = 0
-        for i in range(len(grid)):
-            l, r = 0, len(grid[i]) - 1
-
-            while l <= r:
-                mid = l + (r - l) // 2
-
-                if grid[i][mid] >= 0:
-                    l = mid + 1
-                else:
-                    r = mid - 1
-
-            count_negative += len(grid[i]) - l
+        
+        row, col = 0, len(grid[0]) - 1
+        
+        while col >= 0 and row < len(grid):
+            if grid[row][col] < 0:
+                count_negative += len(grid) - row
+                col -= 1
+            else:
+                row += 1
 
         return count_negative
